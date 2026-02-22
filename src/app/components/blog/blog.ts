@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { Inoticia } from '../../interfaces/inoticia';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './blog.html',
   styleUrl: './blog.css',
 })
 export class Blog {
+
+  mensajeError: string = '';
 
   noticia: Inoticia[] = [
     {
@@ -24,6 +27,35 @@ export class Blog {
     }
     
   ];
+
+  nuevaNoticia: Inoticia = {
+    titulo:'',
+    imagen:'',
+    texto:'',
+    fecha:''
+  };
+
+  publicarNoticia(): void{
+
+    if(this.nuevaNoticia.titulo === '' || this.nuevaNoticia.imagen === '' || this.nuevaNoticia.texto === '' || this.nuevaNoticia.fecha === '' ){
+      this.mensajeError = 'Todos los campos son obligatorios';
+      return;
+    }
+
+    const noticiaInsertar: Inoticia = {
+      titulo: this.nuevaNoticia.titulo,
+      imagen: this.nuevaNoticia.imagen,
+      texto: this.nuevaNoticia.texto,
+      fecha: this.nuevaNoticia.fecha
+    };
+
+    this.noticia.push(noticiaInsertar);
+    this.mensajeError ='';
+
+    this.nuevaNoticia = {titulo:'', imagen:'', texto:'', fecha:''};
+
+
+  }
 
   
 
