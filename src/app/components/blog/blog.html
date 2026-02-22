@@ -1,1 +1,12 @@
-<p>blog works!</p>
+<h2>Listado de noticias</h2>
+
+<div class="listado">
+    @for (noticia of noticia; track noticia.titulo){
+        <div class="noticia">
+            <h3>{{noticia.titulo}}</h3>
+            <img [src]="noticia.imagen" [alt]="noticia.titulo">
+            <p>{{noticia.texto}}</p>
+            <p>{{noticia.fecha}}</p>
+        </div>
+    }
+</div>

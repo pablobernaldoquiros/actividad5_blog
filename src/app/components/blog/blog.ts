@@ -9,7 +9,7 @@ import { Inoticia } from '../../interfaces/inoticia';
 })
 export class Blog {
 
-  noticias: Inoticia[] = [
+  noticia: Inoticia[] = [
     {
       titulo: 'El Servicio Secreto mata a un joven de 21 años que se coló armado en la residencia de Trump en Mar-a-Lago',
       imagen: 'https://e01-phantom-elmundo.uecdn.es/ac3c0ab24b207db458ce6f0981363ad4/resize/1220/f/webp/assets/multimedia/imagenes/2026/02/22/17717816295251.jpg',
@@ -23,8 +23,7 @@ export class Blog {
       fecha: '2026-15-02'
     }
     
-  
-  ]
+  ];
 
   
 
