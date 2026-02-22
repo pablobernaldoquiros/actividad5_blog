@@ -1,3 +1,33 @@
+<h2>Publicar noticia</h2>
+
+<div class="formulario">
+    <div>
+        <p>Titulo</p>
+        <input type="text" placeholder="Titulo de la noticia" [(ngModel)]="nuevaNoticia.titulo">
+    </div>
+    <div>
+        <p>Imagen (URL)</p>
+        <input type="text" placeholder="Url de la noticia" [(ngModel)]="nuevaNoticia.imagen">
+    </div>
+    <div>
+        <p>Texto</p>
+        <input type="text" placeholder="Escriba aqui la noticia" [(ngModel)]="nuevaNoticia.texto">
+    </div>
+    <div>
+        <p>Fecha</p>
+        <input type="date" placeholder="Fecha de la publicacion de la noticia" [(ngModel)]="nuevaNoticia.fecha">
+    </div>
+
+    <p class="error">{{mensajeError}}</p>
+    <button (click)="publicarNoticia()">Publicar</button>
+
+
+
+</div>
+
+
+
+
 <h2>Listado de noticias</h2>
 
 <div class="listado">
