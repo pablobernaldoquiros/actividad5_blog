@@ -50,10 +50,13 @@ button{
     border: 1px solid black;
     padding: 15px;
     border-radius: 8px;
+    text-align: center;
 }
 
 .noticia img{
-    width: 100px;
-    max-width: 300px;
-    margin: 10px 0;
+    width: 60%;
+    display: block;
+
+    max-width: 500px;
+    margin: 15px auto;
 }
